@@ -34,14 +34,14 @@ The model was trained on historical weather data for the relevant locations.
 - **Render** – Cloud hosting platform
 
 ## Project Structure
-
+```
 ├── artifacts/
 │   ├── stationl_model.pkl
 │   ├── station2_model.pkl
 │   ├── stationl_scaler.pkl
-│   ├── station2_scaler.pkl
+│   └── station2_scaler.pkl
 ├── data/
-    ├── USA.cv
+│   ├── USA.csv
 │   └── Canada.csv
 ├── notebooks/
 │   └── model_training.ipynb    # Full model training and evaluation notebook
@@ -53,7 +53,7 @@ The model was trained on historical weather data for the relevant locations.
 ├── Procfile                    # Instructions for Render deployment
 ├── ReadMe.md
 └── requirements.txt            # Python dependencies for the project
-
+```
 
 ## Setup Instructions
 
@@ -84,7 +84,7 @@ Open your browser and visit http://localhost:8050 to interact with the app.
 
 ## Model Details
 
-- **Model Type**: Random Forest, Linear Regression, or XGBoost (based on experimentation)
+- **Model Type**: Random Forest, SVR (MultiOutput), or MLP Regressor (based on experimentation)
 - **Input Features**: Date and location.
 - **Output**: Weather prediction (wind speed, temperature, precipitation, snowfall) and energy production estimate
 - **Data Preprocessing**: Standard scaling, feature engineering for cyclical dates
